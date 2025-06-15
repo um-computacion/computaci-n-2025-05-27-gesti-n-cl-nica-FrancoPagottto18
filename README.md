@@ -4,9 +4,9 @@
 ## 👤 Información del Alumno
 
 ### 📋 Datos Personales
-- **Nombre y Apellido**: [Completar con nombre y apellido]
+- **Nombre y Apellido**: Franco Pagotto
 - **Ciclo Lectivo**: 2025
-- **Carrera**: [Completar con nombre de la carrera]
+- **Carrera**: Ingenieria informatica
 
 ## ⏰ Información Importante sobre la Entrega
 
@@ -346,3 +346,31 @@ El sistema debe incluir pruebas unitarias utilizando el módulo `unittest`, que 
 - ✅ Confirmar que los turnos y recetas se guardan correctamente en la historia clínica del paciente.
 
 ---
+
+## Cómo ejecutar el sistema
+
+Para iniciar el sistema de gestión de la clínica, abrí una terminal y ubicáte en la carpeta principal del proyecto (donde está el archivo `main.py`). Luego ejecutá:
+
+python main.py
+
+Esto va a mostrarte el menú interactivo para gestionar pacientes, médicos, turnos, recetas y más.
+
+
+## Cómo ejecutar las pruebas
+
+Para correr los tests unitarios y verificar que todo funcione correctamente, usá el siguiente comando desde la carpeta principal del proyecto:
+
+python -m unittest discover tests
+
+Esto ejecuta todos los tests que están en la carpeta `tests/`.
+
+
+## Breve explicación del diseño
+
+- modelo/: Acá están todas las clases principales del sistema, como Paciente, Medico, Especialidad, Turno, Receta, HistoriaClinica y Clinica.
+- excepciones/: En esta carpeta están las excepciones personalizadas que se usan para manejar errores específicos del dominio.
+- cli/: Contiene la interfaz de consola, que es la que interactúa con el usuario y muestra el menú.
+- main.py: Es el punto de entrada del sistema, simplemente ejecuta la CLI.
+- tests/: Acá están los tests unitarios para cada parte importante del sistema.
+
+Toda la lógica de negocio y las validaciones están en la clase principal `Clinica`. La interfaz de consola (CLI) solo se encarga de pedir datos y mostrar resultados, capturando las excepciones para mostrar mensajes claros al usuario.
