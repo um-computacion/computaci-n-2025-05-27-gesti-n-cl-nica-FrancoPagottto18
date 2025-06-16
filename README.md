@@ -347,3 +347,37 @@ El sistema debe incluir pruebas unitarias utilizando el módulo `unittest`, que 
 
 ---
 
+## Cómo ejecutar el sistema
+
+Para usar el sistema, abrí una terminal y ubicáte en la carpeta donde está el archivo `main.py`. Después, ejecutá:
+
+```
+python main.py
+```
+
+Esto va a mostrarte el menú principal para gestionar pacientes, médicos, turnos, recetas y más.
+
+---
+
+## Cómo ejecutar las pruebas
+
+Para comprobar que todo funciona bien, podés correr las pruebas automáticas. Desde la misma carpeta del proyecto, ejecutá:
+
+```
+python -m unittest discover tests
+```
+
+Esto va a ejecutar todos los tests y te va a mostrar si hay algún error o si está todo OK.
+
+---
+
+## Explicación de diseño general
+
+- **modelo/**: Contiene todas las clases principales del sistema, como Paciente, Medico, Especialidad, Turno, Receta, HistoriaClinica y Clinica.
+- **excepciones/**: Incluye las excepciones personalizadas para manejar errores específicos del dominio.
+- **cli/**: Acá está la interfaz de consola, que interactúa con el usuario y muestra el menú.
+- **main.py**: Es el punto de entrada del sistema, ejecuta la CLI.
+- **tests/**: Incluye los tests unitarios para cada parte importante del sistema.
+
+Toda la lógica de negocio y las validaciones están en la clase principal `Clinica`. La interfaz de consola (CLI) solo se encarga de pedir datos y mostrar resultados, capturando las excepciones para mostrar mensajes claros al usuario.
+
